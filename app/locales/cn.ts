@@ -29,6 +29,11 @@ const cn = {
     TopTips:
       "🥳 NextChat AI 首发优惠，立刻解锁 OpenAI o1, GPT-4o, Claude-3.5 等最新大模型",
   },
+  Login: {
+    Title: "请登录",
+    Input: "在此处填写账号",
+    PasswordInput: "在此处填写访问码",
+  },
   ChatItem: {
     ChatItemCount: (count: number) => `${count} 条对话`,
   },

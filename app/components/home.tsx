@@ -25,6 +25,7 @@ import {
 import { SideBar } from "./sidebar";
 import { useAppConfig } from "../store/config";
 import { AuthPage } from "./auth";
+import { LoginPage } from "./login";
 import { getClientConfig } from "../config/client";
 import { type ClientApi, getClientApi } from "../client/api";
 import { useAccessStore } from "../store";
@@ -165,6 +166,7 @@ function Screen() {
   const isAuth = location.pathname === Path.Auth;
   const isSd = location.pathname === Path.Sd;
   const isSdNew = location.pathname === Path.SdNew;
+  const isLogin = 1 == 1;
 
   const isMobileScreen = useMobileScreen();
   const shouldTightBorder =
@@ -182,6 +184,7 @@ function Screen() {
     );
   }
   const renderContent = () => {
+    if (isLogin) return <LoginPage />;
     if (isAuth) return <AuthPage />;
     if (isSd) return <Sd />;
     if (isSdNew) return <Sd />;
